@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🔮 {get_size(file.file_size)} 🎪 {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"『🔮 {get_size(file.file_size)} 🎪 {file.file_name}", callback_data=f'files#{file.file_id}』'
                 ),
             ]
             for file in files
@@ -73,10 +73,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎪 {file.file_name} 🎪", callback_data=f'files#{file.file_id}'
+                    text=f"『🎪 {file.file_name} 🎪』", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"🔮 {get_size(file.file_size)} 🔮",
+                    text=f"『🔮 {get_size(file.file_size)} 🔮』",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
@@ -351,7 +351,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('🎪 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ 🎪', url='https://t.me/movie_lookam')
+                InlineKeyboardButton('『🎪 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ 🎪』', url='https://t.me/movie_lookam')
             ]
             ]
         
@@ -401,7 +401,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons  = [
             [
-                 InlineKeyboardButton('🎪 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ 🎪', url='https://t.me/movie_lookam')
+                 InlineKeyboardButton('『🎪 ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ 🎪』', url='https://t.me/movie_lookam')
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons),
@@ -670,7 +670,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🔮 {get_size(file.file_size)}🎪 {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"『🔮 {get_size(file.file_size)}🎪 {file.file_name}", callback_data=f'{pre}#{file.file_id}』'
                 ),
             ]
             for file in files
@@ -679,11 +679,11 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"🎪 {file.file_name} 🎪",
+                    text=f"『🎪 {file.file_name} 🎪』",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
-                    text=f"🔮 {get_size(file.file_size)} 🔮",
+                    text=f"『🔮 {get_size(file.file_size)} 🔮』",
                     callback_data=f'{pre}_#{file.file_id}',
                 ),
             ]
@@ -810,7 +810,7 @@ async def advantage_spell_chok(msg):
     btn = [[
         InlineKeyboardButton(
             text=movie.strip(),
-            callback_data=f"spolling#{user}#{k}",
+            callback_data=f"spolling#{user}#{k}』",
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
