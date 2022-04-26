@@ -37,7 +37,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', callback_data='owner'),
+            InlineKeyboardButton('🍁 ᴏᴡɴᴇʀ', url='https://t.me/NL_MP4'),
             InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
@@ -50,7 +50,7 @@ async def save_group(bot, message):
         if settings["welcome"]:
             for u in message.new_chat_members:
                 buttons = [[
-                InlineKeyboardButton('⚠️ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', url='https://telegra.ph/GROUP-RULES-04-24')
+                InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', url='https://telegra.ph/GROUP-RULES-04-24')
             ]]
     
                 if (temp.MELCOW).get('welcome') is not None:
@@ -80,7 +80,7 @@ async def leave_a_chat(bot, message):
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my support group.</b>',
+            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my owner.</b>',
             reply_markup=reply_markup,
         )
 
