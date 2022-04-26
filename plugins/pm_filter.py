@@ -438,7 +438,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔰 ᴛᴇʟᴇɢʀᴀᴍ 🔰', url='https://t.me/NL_MP4')
         ], [
  
-            InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+            InlineKeyboardButton("🔙 ʙᴀᴄᴋ", callback_data="backcb"),
             InlineKeyboardButton('🔒 ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
