@@ -699,7 +699,7 @@ async def auto_filter(client, msg, spoll=False):
              InlineKeyboardButton(text="ɴᴇxᴛ ⏩", callback_data=f"next_{req}_{key}_{offset}")]
         )
 
-        btn.insert(10,
+        btn.insert(0,
             [InlineKeyboardButton(text="🎀 ᴊᴏɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ 🎀",url="https://t.me/movie_lookam")]
         )
 
@@ -707,9 +707,9 @@ async def auto_filter(client, msg, spoll=False):
         btn.append(
             [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
         )
+
+
         btn.insert(0,
-            [InlineKeyboardButton({file.file_name})
-        btn.insert(10,
             [InlineKeyboardButton(text="🎀 ᴊᴏɪɴ ᴏᴜʀ ɢʀᴏᴜᴘ 🎀",url="https://t.me/movie_lookam")]
         )
 
