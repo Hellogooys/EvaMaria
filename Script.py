@@ -73,13 +73,13 @@ class script(object):
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
-these are the extra features of Eva Maria
+𝑻𝑯𝑬𝑺𝑬 𝑨𝑹𝑬 𝑻𝑯𝑬 𝑬𝑿𝑻𝑹𝑨 𝑭𝑬𝑨𝑼𝑻𝑼𝑹𝑬 𝑶𝑭 𝑻𝑯𝑶𝑴𝑨𝑺 𝑺𝑯𝑬𝑳𝑩𝒀 
 
 <b>Commands and Usage:</b>
-• /id - <code>get id of a specified user.</code>
-• /info  - <code>get information about a user.</code>
-• /imdb  - <code>get the film information from IMDb source.</code>
-• /search  - <code>get the film information from various sources.</code>"""
+• /id - <code>𝑮𝑬𝑻 𝑰𝑫 𝑶𝑭 𝑺𝑷𝑬𝑪𝑰𝑭𝑰𝑪 𝑼𝑺𝑬𝑹.</code>
+• /info  - <code>𝑮𝑬𝑻 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵 𝑶𝑭 𝑼𝑺𝑬𝑹.</code>
+• /imdb  - <code>𝑮𝑬𝑻 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵 𝑨𝑩𝑶𝑼𝑻 𝑨 𝑴𝑶𝑽𝑰𝑬 𝑭𝑹𝑶𝑴 𝑰𝑴𝑫𝑩.</code>
+• /search  - <code>𝑮𝑬𝑻 𝑻𝑯𝑬 𝑽𝑨𝑹𝑰𝑶𝑼𝑺 𝑭𝑰𝑳𝑰𝑴 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵.</code>"""
     ADMIN_TXT = """Help: <b>Admin mods</b>
 
 <b>NOTE:</b>
@@ -102,12 +102,13 @@ these are the extra features of Eva Maria
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
 ⌬ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
 ⌬ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱</b>"""
-    LOG_TEXT_G = """#NewGroup
-Group = {}(<code>{}</code>)
-Total Members = <code>{}</code>
-Added By - {}
+    LOG_TEXT_G = """#𝑵𝑬𝑾 𝑮𝑹𝑶𝑼𝑷
+𝑮𝑹𝑶𝑼𝑷 = {}(<code>{}</code>)
+𝑻𝑶𝑻𝑨𝑳 𝑴𝑬𝑴𝑩𝑬𝑹𝑺 = <code>{}</code>
+𝑨𝑫𝑫𝑬𝑫 𝑩𝒀 - {}
 """
-    LOG_TEXT_P = """<b>𝙽𝙴𝚆 𝚄𝚂𝙴𝚁
-𝙸𝙳 - <code>{}</code>
-𝙽𝙰𝙼𝙴 - {}
+    LOG_TEXT_P = """<b>#𝑵𝑬𝑾 𝑼𝑺𝑬𝑹 𝑨𝑹𝑰𝑽𝑬𝑫
+𝑺𝑻𝑨𝑹𝑻𝑬𝑫 𝒀𝑶𝑼𝑹 𝑩𝑶𝑻
+𝑰𝑫 - <code>{}</code>
+𝑵𝑨𝑴𝑬 - {}
 </b>"""
