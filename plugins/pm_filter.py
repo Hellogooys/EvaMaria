@@ -543,11 +543,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "admin":
         buttons = [[
-            InlineKeyboardButton('⪻ ʙᴀᴄᴋ', callback_data='extra')
+            InlineKeyboardButton('⪻ ʙᴀᴄᴋ', callback_data='extra'),
+            InlineKeyboardButton('ɴᴇxᴛ ⪼', callback_data='admin2')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "admin2":
+        buttons = [[
+            InlineKeyboardButton('⪻ ʙᴀᴄᴋ', callback_data='admin'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.ADMIN_TXT2,
             reply_markup=reply_markup,
             parse_mode='html'
         )
