@@ -67,7 +67,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "💢 ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 💢", url=invite_link.invite_link
+                    "💢 ᴊᴏɪɴ ᴏᴜʀ ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ 💢", url=invite_link.invite_link
                 )
             ]
         ]
@@ -78,7 +78,7 @@ async def start(client, message):
             btn.append([InlineKeyboardButton(" 🔄 ᴛʀʏ ᴀɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**✯ 𝙿𝙻𝙴𝙰𝚂𝙴 𝙹𝙾𝙸𝙽 𝙼𝚈 𝚄𝙿𝙳𝙰𝚃𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ! ✯**",
+            text="**✯ 𝙿𝙻𝙴𝙰𝚂𝙴 𝙹𝙾𝙸𝙽 𝙼𝚈 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝙰𝙲𝙴𝚂𝚂 𝚃𝙷𝙸𝚂 𝙱𝙾𝚃 ! ✯**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
