@@ -112,6 +112,34 @@ class script(object):
 
 » /connections - see current connections
 """
+    ADMIN_TXT2 = """⚙️ ᴄᴏᴍᴍᴏɴ ᴄᴏᴍᴍᴀɴᴅs
+
+» /broadcast - Reply Any Media Or Message
+
+» /logger - Get Bot Logs >> /start - check alive
+
+» /help - see helps 
+
+» /about- see about
+
+⚙️ ɢʀᴏᴜᴘ ᴄᴏᴍᴍᴀɴᴅs
+
+» /ban-ban user from group
+
+» /tban - time set ban
+
+» /unban - unban user from group
+
+» /mute - Mute user from group
+
+» /tmute - time set mute
+
+» /unmute - unmute user from group
+
+» /pin - pin message in group >> /unpin - unpin message in group
+
+» /purge - delete all messages in group"""
+    
     STATUS_TXT = """<b>⌬ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
