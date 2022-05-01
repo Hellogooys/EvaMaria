@@ -425,6 +425,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('❗ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -441,9 +457,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("⪻ ʙᴀᴄᴋ", callback_data="start"),
             InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.OWNER_TXT.format(query.from_user.mention),
+            text=script.OWNER_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -459,6 +491,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('🔮 sᴛᴀᴛᴜs', callback_data='stats')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -473,9 +521,25 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
         ]]
+        reply1 = await query.message.reply_text(
+            text="▢▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply2 = await reply1.edit_text(
+            text="▣▢▢"
+        )
+        await asyncio.sleep(0.5)
+        reply3 = await reply2.edit_text(
+            text="▣▣▢"
+        )
+        await asyncio.sleep(0.5)
+        reply4 = await reply3.edit_text(
+            text="▣▣▣"
+        )
+        await reply4.delete()
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.ABOUT_TXT.format(temp.B_NAME),
+            text=script.ABOUT_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode='html'
         )
