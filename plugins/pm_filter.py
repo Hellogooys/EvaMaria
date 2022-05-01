@@ -760,31 +760,20 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><a href='https://t.me/+q9NMdy0rY10zZWZl'>© IMDb (Series & Movies) Studio</a></b>\n\n<b>✍️ Note:</b> <s>This message will be Auto-deleted after 10 hours to avoid copyright issues.</s>"
+        cap = f"🔰 𝙷𝙴𝚁𝙴 𝚆𝙷𝙰𝚃 𝙸 𝙵𝙾𝚄𝙽𝙳 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝚀𝚄𝙴𝚁𝚈  🔰{search}"
     if imdb and imdb.get('poster'):
         try:
-            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(36000)
-            await hehe.delete()
-            await message.delete()
+            await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+                                      reply_markup=InlineKeyboardMarkup(btn))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(36000)
-            await hmm.delete()
-            await message.delete()
+            await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(36000)
-            await fek.delete()
-            await msg.delete()
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(36000)
-        await fuk.delete()
-        await msg.delete()
+        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     if spoll:
         await msg.message.delete()
 
@@ -793,13 +782,12 @@ async def advantage_spell_chok(msg):
     query = re.sub(
         r"\b(pl(i|e)*?(s|z+|ease|se|ese|(e+)s(e)?)|((send|snd|giv(e)?|gib)(\sme)?)|movie(s)?|new|latest|br((o|u)h?)*|^h(e|a)?(l)*(o)*|mal(ayalam)?|t(h)?amil|file|that|find|und(o)*|kit(t(i|y)?)?o(w)?|thar(u)?(o)*w?|kittum(o)*|aya(k)*(um(o)*)?|full\smovie|any(one)|with\ssubtitle(s)?)",
         "", msg.text, flags=re.IGNORECASE)  # plis contribute some common words
-    search = msg.text
     query = query.strip() + " movie"
     g_s = await search_gagala(query)
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳 𝙽𝙾𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈 𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -828,16 +816,8 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        button = InlineKeyboardMarkup(
-        [[
-           InlineKeyboardButton("✅ Google ✅", url=f"https://www.google.com/search?q={search}")
-        ],
-        [
-           InlineKeyboardButton("⭕️ IMDb", url=f"https://www.imdb.com/find?q={search}"),
-           InlineKeyboardButton("Wikipedia ⭕️", url=f"https://en.m.wikipedia.org/w/index.php?search={search}")
-        ]])
-        k = await msg.reply(f"Hey, Your word <b>{search}</b> is No Movie/Series Related to the Given Word Was Found 🥺\n\n<s>Please Go to Google and Confirm the Correct Spelling 🥺🙏</s>", reply_markup=button)
-        await asyncio.sleep(60)
+        k = await msg.reply("⚠︎  𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 . 𝙲𝙷𝙴𝙲𝙺 𝚈𝙾𝚄 𝚂𝙿𝙴𝙻𝙻𝙸𝙽𝙶 ⚠︎")
+        await asyncio.sleep(8)
         await k.delete()
         return
     SPELL_CHECK[msg.message_id] = movielist
@@ -848,11 +828,8 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    m = await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?",
+    await msg.reply("<b>⚠︎ 𝙸 𝙲𝙾𝚄𝙻𝙳𝙽'𝚃 𝙵𝙸𝙽𝙳 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝚁𝙴𝙻𝙰𝚃𝙴𝙳 𝚃𝙾 𝚃𝙷𝙰𝚃 ⚠︎\n🔰 𝙳𝙸𝙳 𝚈𝙾𝚄 𝙼𝙴𝙰𝙽 𝙰𝙽𝚈𝚃𝙷𝙸𝙽𝙶 𝙾𝙵 𝚃𝙷𝙴𝚂𝙴 🔰</b>",
                     reply_markup=InlineKeyboardMarkup(btn))
-    await asyncio.sleep(20)
-    await m.delete()
-
 
 
 async def manual_filters(client, message, text=False):
@@ -872,70 +849,30 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            await message.reply_text(
-                             reply_text.format(
-                                 first = message.from_user.first_name,
-                                 last = message.from_user.last_name,
-                                 username = None if not message.from_user.username else '@' + message.from_user.username,
-                                 mention = message.from_user.mention,
-                                 id = message.from_user.id,
-                                 dcid = message.from_user.dc_id,
-                                 chatname = message.chat.title,
-                                 query = name
-                             ),
-                             group_id,
-                             disable_web_page_preview=True,
-                             reply_to_message_id=reply_id
-                            )
+                            await client.send_message(group_id, reply_text, disable_web_page_preview=True)
                         else:
                             button = eval(btn)
-                            await message.reply_text(
-                                reply_text.format(
-                                    first = message.from_user.first_name,
-                                    last = message.from_user.last_name,
-                                    username = None if not message.from_user.username else '@' + message.from_user.username,
-                                    mention = message.from_user.mention,
-                                    id = message.from_user.id,
-                                    dcid = message.from_user.dc_id,
-                                    chatname = message.chat.title,
-                                    query = name
-                                ),
+                            await client.send_message(
                                 group_id,
+                                reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button),
-                                reply_to_message_id = reply_id
+                                reply_to_message_id=reply_id
                             )
                     elif btn == "[]":
-                        await message.reply_cached_media(
+                        await client.send_cached_media(
+                            group_id,
                             fileid,
-                            caption=reply_text.format(
-                                first = message.from_user.first_name,
-                                last = message.from_user.last_name,
-                                username = None if not message.from_user.username else '@' + message.from_user.username,
-                                mention = message.from_user.mention,
-                                id = message.from_user.id,
-                                dcid = message.from_user.dc_id,
-                                chatname = message.chat.title,
-                                query = name
-                            ) or "",
-                            reply_to_message_id = reply_id
+                            caption=reply_text or "",
+                            reply_to_message_id=reply_id
                         )
                     else:
-                        button = eval(btn) 
+                        button = eval(btn)
                         await message.reply_cached_media(
                             fileid,
-                            caption=reply_text.format(
-                                first=message.from_user.first_name,
-                                last=message.from_user.last_name,
-                                username = None if not message.from_user.username else '@' + message.from_user.username,
-                                mention = message.from_user.mention,
-                                id=message.from_user.id,
-                                dcid = message.from_user.dc_id,
-                                chatname = message.chat.title,
-                                query = name
-                            ) or "",
+                            caption=reply_text or "",
                             reply_markup=InlineKeyboardMarkup(button),
-                            reply_to_message_id = reply_id
+                            reply_to_message_id=reply_id
                         )
                 except Exception as e:
                     logger.exception(e)
