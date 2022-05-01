@@ -79,23 +79,39 @@ class script(object):
 • /info  - <code>𝑮𝑬𝑻 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵 𝑶𝑭 𝑼𝑺𝑬𝑹.</code>
 • /imdb  - <code>𝑮𝑬𝑻 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵 𝑨𝑩𝑶𝑼𝑻 𝑨 𝑴𝑶𝑽𝑰𝑬 𝑭𝑹𝑶𝑴 𝑰𝑴𝑫𝑩.</code>
 • /search  - <code>𝑮𝑬𝑻 𝑻𝑯𝑬 𝑽𝑨𝑹𝑰𝑶𝑼𝑺 𝑭𝑰𝑳𝑰𝑴 𝑰𝑵𝑭𝑶𝑹𝑴𝑨𝑻𝑰𝑶𝑵.</code>"""
-    ADMIN_TXT = """Help: <b>Admin mods</b>
+    ADMIN_TXT = """Help: <b>ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴛs</b>
 
 <b>NOTE:</b>
-⌬ 𝚃𝙷𝙸𝚂 𝙼𝙾𝙳𝚄𝙻𝙴 𝙾𝙽𝙻𝚈 𝚆𝙾𝚁𝙺 𝙵𝙾𝚁 𝙼𝚈 𝙰𝙳𝙼𝙸𝙽 ⌬
 
-<b>Commands and Usage:</b>
-• /logs - <code>to get the rescent errors</code>
-• /stats - <code>to get status of files in db.</code>
-• /delete - <code>to delete a specific file from db.</code>
-• /users - <code>to get list of my users and ids.</code>
-• /chats - <code>to get list of the my chats and ids </code>
-• /leave  - <code>to leave from a chat.</code>
-• /disable  -  <code>do disable a chat.</code>
-• /ban  - <code>to ban a user.</code>
-• /unban  - <code>to unban a user.</code>
-• /channel - <code>to get list of total connected channels</code>
-• /broadcast - <code>to broadcast a message to all users</code>"""
+ᴛʜɪs ᴄᴏᴍᴍᴀɴᴛs ᴏɴʟʏ ᴡᴏʀᴋ ғᴏʀ ᴀᴅᴍɪɴ
+
+
+⚙️ ᴀᴜᴛᴏ ғɪʟᴛᴇʀ
+
+» /delete - Reply Files
+
+» /deleteall - Delete All Files
+
+» /total - How Many Files Saved
+
+» /channel - Add Channel List
+
+⚙️ ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀ
+
+» /add - add a new filter
+
+» /filters - see your filters
+
+» /connect - connect a chat
+
+» /delfilter - delete a filter
+
+» /delall_filters - delete all filters from chat
+
+» /disconnect - disconnect a chat 
+
+» /connections - see current connections
+"""
     STATUS_TXT = """<b>⌬ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: <code>{}</code>
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
