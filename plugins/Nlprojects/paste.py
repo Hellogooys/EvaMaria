@@ -4,7 +4,6 @@
 import os
 import re
 import json
-import aiohttp
 import requests
 
 from pyrogram import Client, filters
