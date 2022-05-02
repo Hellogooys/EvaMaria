@@ -16,7 +16,7 @@
 import os
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
-from telegraph import upload_file
+from telegraph.py import upload_file
 
 @Client.on_message(filters.command(["tgmedia", "tgraph", "telegraph"]))
 async def telegraph(client, message):
