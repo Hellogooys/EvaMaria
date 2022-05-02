@@ -20,7 +20,6 @@ import math
 import os
 import time
 
-import aiohttp
 import wget
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified
