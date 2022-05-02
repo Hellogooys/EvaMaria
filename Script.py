@@ -43,6 +43,21 @@ class script(object):
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
+    FILLINGS_TXT = """Help: <b>Fillings</b>
+You can also customise the contents of your message with contextual data. For example, you could mention a user by name in the filter message, or mention them in a filter!
+<b>Supported fillings:</b>
+- <code>{first}</code>: The user's first name.
+- <code>{last}</code>: The user's last name.
+- <code{username}</code>: The user's username.
+- <code>{mention}</code>: Mentions the user with their firstname.
+- <code>{id}</code>: The user's ID.
+- <code>{dcid}</code>: The user's DC ID.
+- <code>{chatname}</code>: The chat's name.
+- <code>{query}</code>: Any Replied Message.
+<b>Example:</b>
+<b>- Save a filter using the mention.</b>
+-> <code>/filter test Hello {mention} This Is your Username : {username} And This Is your ID : {id}.</code>
+"""
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
 
 <b>NOTE:</b>
@@ -63,6 +78,102 @@ class script(object):
 • /connect  - <code>connect a particular chat to your PM</code>
 • /disconnect  - <code>disconnect from a chat</code>
 • /connections - <code>list all your connections</code>"""
+    AUTO_MANUAL_TXT = """Help: <b>Filters</b>
+<b>Select a filters type Below:</b>"""
+
+    PASTE_TXT = """Help: <b>Paste</b>
+Paste some texts or documents on a website!
+<b>Commands and Usage:</b>
+• /paste [text] - paste the given text on Pasty
+• /paste [reply] - paste the replied text on Pasty
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TGRAPH_TXT = """Help: <b>TGraph & Paste</b>
+Do as you wish with telegra.ph module!
+<b>Commands and Usage:</b>
+• /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    INFO_TXT = """Help: <b>Information</b>
+Get information about something!
+<b>Commands and Usage:</b>
+• /id - get id of a specified user.
+• /info  - get information about a user.
+• /json - get the json details of a message.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TORRENT_TXT = """Help: <b>Torrent Search</b>
+<b>Commands and Usage:</b>
+• /torrent or /tor <movie name>: Get Your Torrent Link From Various Resource.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    GTRANS_TXT = """Help: <b>Google Translator</b>
+Translate texts to a specific language!
+<b>Commands and Usage:</b>
+• /tr [language code][reply] - translate replied message to specific language.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• IMDb can translate texts to 200+ languages."""
+
+    SEARCH_TXT = """Help: <b>IMDb</b>
+Search many things without leaving telegram!
+<b>Commands and Usage:</b>
+• /imdb  - get the film information from IMDb source.
+• /search  - get the film information from various sources.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• More search tools can be found on inline.
+• Those commands works on both pm and group."""
+
+    PURGE_TXT = """Help: <b>Purge</b>
+Need to delete lots of messages? That's what purges are for!
+<b>Commands and Usage:</b>
+• /purge - delete all messages from the replied to message, to the current message.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on group.
+• These commands can be used by Only admin."""
+
+    RESTRIC_TXT = """Help: <b>Restrictions</b>
+Some people need to be publicly banned; spammers, annoyances, or just trolls.
+This module allows you to do that easily, by exposing some common actions, so everyone will see!
+<b>Commands and Usage:</b>
+• /ban - ban a user.
+• /tban - temporarily ban a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
+• /mute - mute a user.
+• /tmute - temporarily mute a user. Example time values: 4m = 4 minutes, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
+• /unban or /unmute - unmute a user & unban a user.
+<b>Examples:</b>
+- Mute a user for two hours.
+-> <code>/tmute @username 2h</code>
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on group.
+• These commands can be used by Only admin."""
+
+    PIN_MESSAGE_TXT = """Help: <b>Pin Message</b>
+All the pin related commands can be found here; keep your chat up to date on the latest news with a simple pinned message!
+<b>Commands and Usage:</b>
+• /pin: Pin the message you replied to. Add 'loud' or 'notify' to send a notification to group members.
+• /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works only group.
+• These commands can be used by Only admin."""
+
     EXTRAMOD_TXT = """Help: <b>Extra Modules</b>
 
 <b>NOTE:</b>
@@ -143,6 +254,74 @@ class script(object):
 ⌬ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: <code>{}</code>
 ⌬ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱
 ⌬ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: <code>{}</code> 𝙼𝚒𝙱</b>"""
+    MEMES_TXT = """Help: <b>Memes</b>
+Some dank memes for fun or whatever!
+<b>Commands and Usage:</b>
+• /throw or /dart - t𝗈 m𝖺𝗄𝖾 drat 
+• /roll or /dice - roll the dice 
+• /goal or /shoot - to make a goal or shoot
+• /luck or /cownd - Spin the Lucky
+• /runs strings
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    URL_SHORTNER_TXT = """Help: <b>URL Shortner</b>
+Some URLs is Shortner
+<b>Commands and Usage:</b>
+• /short <code>(link)</code> - I will send the shorted links.
+<b>Example:</b>
+<code>/short https://t.me/josprojects</code>
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    TTS_TXT = """Help: <b>Text to Speech</b>
+A module to convert text to voice with language support.
+<b>Commands and Usage:</b>
+• /tts - Reply to any text message with language code to convert as audio.
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    MUSIC_TXT = """Help: <b>Music</b>
+Music download modules, for those who love music.
+<b>Commands and Usage:</b>
+• /song or /mp3 (songname) - download song from yt servers.
+• /video or /mp4 (songname) - download video from yt servers.
+<b>YouTube Thumbnail Download</b>
+• /ytthumb (youtube link)
+<b>Example:</b> <code>/ytthumb https://youtu.be/h6PtzFYaMxQ</code>
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    PASSWORD_GEN_TXT = """Help: <b>Password Generator</b>
+There Is Nothing To Know More. Send Me The Limit Of Your Password.
+- I Will Give The Password Of That Limit.
+<b>Commands and Usage:</b>
+• /genpassword or /genpw <code>20</code>
+<b>NOTE:</b>
+• Only Digits Are Allowed
+• Maximum Allowed Digits Till 84 
+(I Can't Generate Passwords Above The Length 84)
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    SHARE_TXT = """Help: <b>Sharing Text Maker</b>
+a bot to create a link to share text in the telegram.
+<b>Commands and Usage:</b>
+• /share (text or reply to message)
+<b>NOTE:</b>
+• IMDb should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     LOG_TEXT_G = """#𝐍𝐞𝐰𝐆𝐫𝐨𝐮𝐩
     
 <b>᚛› 𝐆𝐫𝐨𝐮𝐩 ⪼  {}(<code>{}</code>)</b>
