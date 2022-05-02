@@ -428,15 +428,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply1 = await query.message.reply_text(
             text="▢▢▢"
         )
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.2)
         reply2 = await reply1.edit_text(
             text="▣▢▢"
         )
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.2)
         reply3 = await reply2.edit_text(
             text="▣▣▢"
         )
-        await asyncio.sleep(0.3)
+        await asyncio.sleep(0.2)
         reply4 = await reply3.edit_text(
             text="▣▣▣"
         )
@@ -516,7 +516,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam'),
-            InlineKeyboardButton("Share me🥰", url="https://t.me/share/url?url=https://t.me/Dqautofl_bot")       
+            InlineKeyboardButton("💖 sʜᴀʀᴇ ᴍᴇ ", url="https://t.me/share/url?url=https://t.me/CL_FILTER_BOT")       
         ], [
             InlineKeyboardButton('🏠 ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏsᴇ ✘', callback_data='close_data')
