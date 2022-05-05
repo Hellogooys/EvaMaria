@@ -41,29 +41,20 @@ async def save_group(bot, message):
             InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url='https://t.me/movie_lookam')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
-        await message.reply_video(
-            video="https://telegra.ph/file/f264ce1113efb81c8a682.mp4",
-            caption=f"<b>💖 𝚃𝙷𝙰𝙽𝙺 𝚈𝙾𝚄 𝙵𝙾𝚁 𝙰𝙳𝙳𝙸𝙽𝙶 {message.chat.title} 💖\n\n✨ 𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰𝙽𝚈 𝚀𝚄𝙴𝚂𝚃𝙸𝙾𝙽 & 𝙳𝙾𝚄𝙱𝚃 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 ✨</b>",
+        await message.reply_text(
+            text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
             for u in message.new_chat_members:
-                buttons = [[
-                InlineKeyboardButton('⚠️ ɢʀᴏᴜᴘ ʀᴜʟᴇs ⚠️', url='https://telegra.ph/GROUP-RULES-04-24')
-            ]]
-    
                 if (temp.MELCOW).get('welcome') is not None:
                     try:
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                video=("https://telegra.ph/file/922ba803c3e701590dc97.mp4"),
-                caption=f"<b>💖 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ {u.mention},</b> <b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ</b> <b>{message.chat.title} 💖</b>",
-                reply_markup=InlineKeyboardMarkup(buttons))
-                
-              
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
     if len(message.command) == 1:
